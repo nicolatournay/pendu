@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background: url(https://wallpapercave.com/wp/wp4078019.jpg) center/cover no-repeat;
+    min-height: 100vh;
+}
+
+.container {
+    width: 350px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.5rem;
+}
+
+.pendu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+table {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.score {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.errorDisplay,
+.guess {
+    display: block;
+    font-weight: 700;
+
+}
+
+p,
+h3 {
+    margin: 0;
+}
+
+input {
+    padding: 0.5rem 0 0.5rem 1rem;
+    border-radius: 50px;
+    border: 0.2rem solid #fff;
+    outline: none;
+    align-self: center;
+}
+
+button {
+    align-self: center;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="js/main.js" defer async></script>
+    <title>Jeu du Pendu</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="pendu">
+            <h1>Jeu du Pendu</h1>
+            <!-- un tableau de 5 colonnes sur 5 rangées -->
+            <table cellpadding="0" cellspacing="0" border="0">
+                <!-- row 0 -->
+                <tr>
+                    <td></td>
+                    <td data-error="4" class="hidden">_</td>
+                    <td data-error="4" class="hidden">_</td>
+                    <td data-error="5" class="hidden">_</td>
+                    <td data-error="5" class="hidden">_</td>
+                    <td data-error="5" class="hidden">_</td>
+                </tr>
+                <!-- row 1 -->
+                <tr>
+                    <td></td>
+                    <td data-error="3" class="hidden">|</td>
+                    <td></td>
+                    <td></td>
+                    <td data-error="5" class="hidden">|</td>
+                    <td></td>
+                </tr>
+                <!-- row 2 -->
+                <tr>
+                    <td></td>
+                    <td data-error="3" class="hidden">|</td>
+                    <td></td>
+                    <td></td>
+                    <td data-error="6" class="hidden">0</td>
+                    <td></td>
+                </tr>
+                <!-- row 3 -->
+                <tr>
+                    <td></td>
+                    <td data-error="2" class="hidden">|</td>
+                    <td></td>
+                    <td data-error="8" class="hidden">/</td>
+                    <td data-error="7" class="hidden">|</td>
+                    <td data-error="9" class="hidden">\</td>
+                </tr>
+                <!-- row 4 -->
+                <tr>
+                    <td></td>
+                    <td data-error="2" class="hidden">|</td>
+                    <td></td>
+                    <td data-error="10" class="hidden">/</td>
+                    <td></td>
+                    <td data-error="11" class="hidden">\</td>
+                </tr>
+                <!-- row 5 -->
+                <tr>
+                    <td data-error="1" class="hidden">_</td>
+                    <td data-error="1" class="hidden">|</td>
+                    <td data-error="1" class="hidden">_</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <input type="text" placeholder="Entrez une lettre">
+        <p>Erreurs : <span class="errorDisplay"></span></p>
+        <p>Mot à deviner : <span class="guess"></span></p>
+        <details>
+            <summary>Indice</summary>
+            <span class="hint"></span>
+        </details>
+        <div class="score hidden">
+            <button>Rejouer</button>
+        </div>
+    </div>
+</body>
+</html>
