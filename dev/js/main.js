@@ -105,12 +105,13 @@ function isLetterInWord(str) {
 
 // function that checks if the user has won
 function checkWin() {
-    // if the success array length contains all the letters found in the word, the user has won
-    if (success.length === word.length) {
+    // if the success array includes all the letters of the word, the user has won
+    if (word.split('').every(w => success.includes(w))) {
         score.classList.remove('hidden');
         let template = `
             <h3>Gagné !</h3>
-            <p>Pour jouer une nouvelle partie, clique ci-dessus 👆</p>
+            <p>Pour jouer une nouvelle partie, clique ci-dessous 👇</p>
+            <button>Rejouer</button>
         `;
         score.innerHTML += template;
         // get the button element
@@ -124,7 +125,8 @@ function checkWin() {
         let template = `
             <h3>T'es mort ! 💀</h3>
             <p>Le mot était ${word}</p>
-            <p>Pour jouer une nouvelle partie, clique ci-dessus 👆</p>
+            <p>Pour jouer une nouvelle partie, clique ci-dessous 👇</p>
+            <button>Rejouer</button>
         `;
         score.innerHTML += template;
         // get the button element
